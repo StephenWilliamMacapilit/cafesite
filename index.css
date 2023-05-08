@@ -43,17 +43,17 @@ body {
 
 .Menu {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     background-color: white;
-    height: 250px;
+    flex-wrap: wrap;
 }
 
 .Product {
-    width: 200px;
+    flex: 0 0 auto;
+    width: 21%;
     height: fit-content;
-    margin: 2%;
+    margin: 10px;
     border: groove black thin;
-    transition: 0.5s;
     box-sizing: border-box;
 }
 .Detail {
@@ -74,19 +74,36 @@ body {
     width: 100%;
     height: 100%;
 }
-.Button {
-    position: absolute;
-    background-color: lightgreen;
-    width: 145px;
-    border: groove black thin;
-    box-sizing: border-box;
-    display: none;
-}
-.Button h3 {
-    margin: 0;
-    padding: 4px;
+
+
+.Hidden {
+    position: relative;
+    width: 100%;
 }
 
-.Product:hover .Button {
+.Short {
+    position: absolute;
+    background-color: aquamarine;
+    width: 100%;
+    display: none;
+    padding: 5px;
+    box-sizing: border-box;
+    border: solid black thin;
+}
+
+.Short a {
+    display: flex;
+    align-items: center;
+}
+
+.Short p {
+    margin: 5px;
+}
+
+.Short img {
+    width: 25px;
+}
+
+.Product:hover .Short{
     display: block;
 }
